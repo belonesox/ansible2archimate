@@ -1,0 +1,69 @@
+ignore:
+    packages:
+        - wget
+        - ncdu
+        - git
+        - unzip
+        - ack-grep
+        - ca-certificates
+        - htop
+        - locales
+        - mc
+        - python-lxml
+        - unzip
+        - wget
+        - zip
+    files:
+        - /etc/apt
+        - /etc/locale.gen
+        - /var/cache.*
+        - /var/log/.*
+        - /var/run/.*
+
+system-soft:
+    PHP:
+        - php.*
+    nginx:
+        - /etc/nginx.*
+    postgresql:
+        - /etc/postgresql.*
+    postgresql-client:
+        - python-psycopg2
+    rabbitmq:
+        - /etc/rabbitmq.*
+    nodejs:
+        - npm
+    java-8:
+        - openjdk-8-jdk
+    keycloak:
+        - /etc/keycloak.*
+        - /opt/wildfly/modules/system/add-ons/keycloak/org/keycloak.*
+
+    prometheus:
+        - /etc/prometheus.*
+        - /opt/prometheus.*
+
+    node_exporter:
+        - /lib/systemd/system/node_exporter.service
+        - /run/sysconfig/node_exporter
+
+    wildfly:
+        - /etc/wildfly.*
+        - /opt/pg.*
+        - /lib/systemd/system/wildfly.service
+
+application-soft:
+    web-tms-calendar:
+        - /home/tms/www.*
+        - /lib/systemd/system/tms-eventproxy.service
+
+    tms-backend:
+        - /etc/tms.*
+        - /etc/tms-eventproxy.*
+        - /etc/keycloak-tms.*
+
+    tms-integration:
+        - /home/data/test_integration.*
+
+
+
